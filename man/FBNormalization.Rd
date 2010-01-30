@@ -46,13 +46,9 @@ FBNormalization(rawDataFileName = NULL, fishProbesFileName = NULL,
 \value{
 	No value is returned. The function writes on the disk the output files as previously described. 
 }
-\references{  }
 \author{ Adrian Andronache \email{adi.andronache@gmail.com} \cr
 Luca Agnelli \email{luca.agnelli@gmail.com}
 }
-\note{ 
-}
-\seealso{  }
 \examples{
 
 ## set path to FBN package data directory
@@ -62,5 +58,3 @@ normDataFileName= 'hmcls_NORM.txt'
 FBNormalization(rawDataFileName, fishProbesFileName, normDataFileName, 
 	debugFlag = FALSE)
 }
-\keyword{ }
-\keyword{  }

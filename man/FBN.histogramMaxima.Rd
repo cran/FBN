@@ -11,7 +11,7 @@
 }
 \usage{
 FBN.histogramMaxima(inputData, minSpan, breaksData)
-FBN.histogramMaxima(inputData, minSpan = 0.1, breaksData = NULL)
+FBN.histogramMaxima(inputData, minSpan = 0.2, breaksData = NULL)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
@@ -30,13 +30,10 @@ FBN.histogramMaxima(inputData, minSpan = 0.1, breaksData = NULL)
 \value{
 	Returns a vector containing at most 6 values of the \code{inputData} in which the histogram shows local maxima.
 }
-\references{  }
 \author{ Adrian Andronache \email{adi.andronache@gmail.com} \cr
 Luca Agnelli \email{luca.agnelli@gmail.com}
 }
-\note{  
 
-}
 \seealso{\code{\link{hist}}, \code{\link{FBNormalization}} }
 \examples{
 require(stats)

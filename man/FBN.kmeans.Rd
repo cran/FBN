@@ -7,7 +7,7 @@
 }
 \usage{
 FBN.kmeans(inputData, minSpan, breaksData)
-FBN.kmeans(inputData = NULL, minSpan = 0.1, breaksData = NULL)
+FBN.kmeans(inputData = NULL, minSpan = 0.2, breaksData = NULL)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
@@ -32,13 +32,9 @@ FBN.kmeans(inputData = NULL, minSpan = 0.1, breaksData = NULL)
 \value{
   An object of class \code{\link{kmeans}}
 }
-\references{  }
 \author{ Adrian Andronache \email{adi.andronache@gmail.com} \cr
 Luca Agnelli \email{luca.agnelli@gmail.com}
 }
-\note{ 
-}
-\seealso{  }
 \examples{
 	
 require(stats)

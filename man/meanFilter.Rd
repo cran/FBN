@@ -17,13 +17,9 @@ meanFilter(inputData = NULL, windowSize = 3)
 \value{
   The output data has the same size of the input data. If the window half-size is smaller or equal to 1, then the input data is passed directly to the output data.
 }
-\references{  }
 \author{ Adrian Andronache \email{adi.andronache@gmail.com} \cr
 Luca Agnelli \email{luca.agnelli@gmail.com}
 }
-\note{ 
-}
-\seealso{  }
 \examples{
 x <- meanFilter(c(0, 0, 0, 1, 1, 1, 0, 0, 1, 0))
 x <- meanFilter(c(0, 0, 0, 1, 0, 0, 0, 0, 1, 0), windowSize = 5)

@@ -27,7 +27,4 @@ Luca Agnelli \email{luca.agnelli@gmail.com}
 Agnelli L et al. (2009), "A SNP Microarray and FISH-Based Procedure to Detect Allelic Imbalances in Multiple Myeloma: an Integrated Genomics Approach Reveals a Wide Gene Dosage Effect", \emph{Genes Chrom Cancer}
 }
 \keyword{ package }
-\seealso{
-}
-\examples{
-}
+

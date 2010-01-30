@@ -29,11 +29,8 @@ FBN.valueCenter(inputData = NULL, normalizingValue = NULL,
 \value{
 	Returns a vector containing the normalized values of the \code{inputData}
 }
-\references{ }
 \author{ Adrian Andronache \email{adi.andronache@gmail.com} \cr
 Luca Agnelli \email{luca.agnelli@gmail.com}
-}
-\note{ 
 }
 \seealso{ \code{\link{FBN.kmeans}}, \code{\link{FBNormalization}}  }
 \examples{
