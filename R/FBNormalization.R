@@ -136,17 +136,18 @@ function (rawDataFileName = NULL, fishProbesFileName = NULL, normDataFileName = 
             rm(posProbe, idxStartPosProbe, idxEndPosProbe)
             next
         }
-        if(idxStartPosProbe[1] > idxEndPosProbe[length(idxEndPosProbe)])
+        if(idxStartPosProbe[1] > idxEndPosProbe[length(idxEndPosProbe)]){
             idxPosProbe = idxEndPosProbe[length(idxEndPosProbe)]:idxStartPosProbe[1]
-        else
+        } else {
             idxPosProbe = idxStartPosProbe[1]:idxEndPosProbe[length(idxEndPosProbe)]
-        
+        }
         allSnpProbe = rawData[idxPosProbe, ]
-        if(length(idxPosProbe) == 1)
+        if(length(idxPosProbe) == 1){
         	snpProbe[i,] = allSnpProbe
-        else
+        } else{
 	        for( j in 1:colData)
     	        snpProbe[i,j] = median(allSnpProbe[,j])
+    	}
         rm(posProbe, idxStartPosProbe, idxEndPosProbe, idxPosProbe)
     }
     ###################################################################
@@ -171,10 +172,10 @@ function (rawDataFileName = NULL, fishProbesFileName = NULL, normDataFileName = 
     for(i in 1:colData){
     	if(flagHasFish[i] == 0) next
     	cn = fishProbe[,i]
-    	if(length(cn) == 1) next
     	snp = normalizingSNP[!is.na(cn),i]
     	probe = snpProbe[!is.na(cn),i]
     	cn = cn[!is.na(cn)]
+    	if(length(cn) == 1) next    	
 		sortSnp = sort(snp, index.return = TRUE)
 		sortCN = cn[sortSnp$ix]
 		sortProbe = probe[sortSnp$ix]
