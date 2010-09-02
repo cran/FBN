@@ -1,5 +1,4 @@
-FBNormalization <-
-function (rawDataFileName = NULL, fishProbesFileName = NULL, normDataFileName = NULL, debugFlag = FALSE)
+FBNormalization <- function (rawDataFileName = NULL, fishProbesFileName = NULL, normDataFileName = NULL, debugFlag = FALSE, plotFlag = FALSE, plotAndSaveFlag = FALSE)
 {
 	k = list.files()
 	########################################
@@ -239,16 +238,29 @@ function (rawDataFileName = NULL, fishProbesFileName = NULL, normDataFileName = 
 				par(mfrow = c(2, 1))
 				hist(rawData[,i], plot = TRUE, breaks = breaksNormData, main = nameData[i])
 				hist(normData[,4+i], plot = TRUE, breaks = breaksNormData)
-				#dev.print(device = bmp, width=1024, height=768, paste(nameData[i],".bmp",sep="")) 
+				if(plotAndSaveFlag){
+					dev.print(device = bmp, width=1024, height=768, paste(nameData[i],".bmp",sep="")) 
+				}
 				cat("push enter to continue....")
 				readline()
+			}
+			if(plotFlag){
+				par(mfrow = c(2, 1))
+				hist(rawData[,i], plot = TRUE, breaks = breaksNormData, main = nameData[i])
+				hist(normData[,4+i], plot = TRUE, breaks = breaksNormData)
+			}
+			if(plotAndSaveFlag){
+				par(mfrow = c(2, 1))
+				hist(rawData[,i], plot = TRUE, breaks = breaksNormData, main = nameData[i])
+				hist(normData[,4+i], plot = TRUE, breaks = breaksNormData)
+				dev.print(device = bmp, width=1024, height=768, paste(nameData[i],".bmp",sep="")) 
 			}
 		}
 		if(!flagNewData) next
 		cat("\nK-MEANS for group CN", CN, "\n")
         allNormData = as.matrix(normData[chrData != chrData[length(chrData)], 4+which(flagIsNormalized == 1)])
         allNormData = as.numeric(as.vector(allNormData))
-        if(debugFlag){
+        if(debugFlag | plotFlag | plotAndSaveFlag){
         	par(mfrow = c(1, 1))
         	histAllNormData = hist(allNormData, plot = TRUE, breaks = breaksNormData)
         }
@@ -274,7 +286,7 @@ function (rawDataFileName = NULL, fishProbesFileName = NULL, normDataFileName = 
 		}
 		if(length(which(flagIsNormalized[flagHasFish == 1] == 0)) > 0)
 			rm(allNormData, clusterAllNormData)
-		if(debugFlag)
+		if(debugFlag | plotFlag | plotAndSaveFlag)
 			rm(histAllNormData)
 		cat("\nCN values: ", valueCN, "\n\n")
         if(debugFlag){
@@ -322,6 +334,17 @@ function (rawDataFileName = NULL, fishProbesFileName = NULL, normDataFileName = 
 			#dev.print(device = bmp, width=1024, height=768, paste(nameData[i],".bmp",sep="")) 
 			cat("push enter to continue....")
 			readline()
+		}		
+		if(plotFlag){
+			par(mfrow = c(2, 1))
+			hist(rawData[,i], plot = TRUE, breaks = breaksNormData, main = nameData[i])
+			hist(normData[,4+i], plot = TRUE, breaks = breaksNormData)
+		}
+		if(plotAndSaveFlag){
+			par(mfrow = c(2, 1))
+			hist(rawData[,i], plot = TRUE, breaks = breaksNormData, main = nameData[i])
+			hist(normData[,4+i], plot = TRUE, breaks = breaksNormData)
+			dev.print(device = bmp, width=1024, height=768, paste(nameData[i],".bmp",sep="")) 
 		}
     }
     ##############################################################################################################
@@ -338,10 +361,10 @@ function (rawDataFileName = NULL, fishProbesFileName = NULL, normDataFileName = 
 	cat("\nFinal K-MEANS for all data", "\n")
     allNormData = as.matrix(normData[chrData != chrData[length(chrData)], 4+which(flagIsNormalized == 1)])
     allNormData = as.numeric(as.vector(allNormData))
-	#if(debugFlag){
+	if(plotFlag | plotAndSaveFlag){
     	par(mfrow = c(1, 1))
     	histAllNormData = hist(allNormData, plot = TRUE, breaks = breaksNormData)
-    #}
+    }
 	clusterAllNormData = FBN.kmeans(inputData = allNormData, minSpan = 0.3, breaksData = NULL)
 	#plot(allNormData, col = clusterAllNormData$cluster)
 	tempNominalCN = abs(clusterAllNormData$centers - 2)
@@ -403,4 +426,3 @@ function (rawDataFileName = NULL, fishProbesFileName = NULL, normDataFileName = 
 	cat("FBNormalization done!\n")
 	return()
 }
-

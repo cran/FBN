@@ -9,9 +9,9 @@
 }
 \usage{
 FBNormalization(rawDataFileName, fishProbesFileName, 
-	normDataFileName, debugFlag)
+	normDataFileName, debugFlag, plotFlag, plotAndSaveFlag)
 FBNormalization(rawDataFileName = NULL, fishProbesFileName = NULL, 
-	normDataFileName = NULL, debugFlag = FALSE)
+	normDataFileName = NULL, debugFlag = FALSE, plotFlag = FALSE, plotAndSaveFlag = FALSE)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
@@ -39,6 +39,8 @@ FBNormalization(rawDataFileName = NULL, fishProbesFileName = NULL,
   	a file starting with the same name as \code{normDataFileName} and ending with \emph{'\_thresholds.txt'}, containing the
   	thresholds values that can be used to infer CNs to the normalized data. }
   \item{debugFlag}{ Logical value, specifying wether the function should run in debug mode. If \code{TRUE}, it plots the various histograms and the detected centers of the clusters in the different samples. }
+  \item{plotFlag}{ Logical value, specifying wether the function should plot the histograms of the individual data. If \code{TRUE}, it plots the various histograms and the detected centers of the clusters in the different samples. }
+  \item{plotAndSaveFlag}{ Logical value, specifying wether the function should plot and save the various plots of the histograms. }
 }
 \details{
 	For further detalis, see Supporting Information in \cite{Agnelli L et al. (2009), "A SNP Microarray and FISH-Based Procedure to Detect Allelic Imbalances in Multiple Myeloma: an Integrated Genomics Approach Reveals a Wide Gene Dosage Effect", \emph{Genes Chrom Cancer}}
