@@ -31,7 +31,7 @@ FBN.histogramMaxima(inputData, minSpan = 0.2, breaksData = NULL)
 	Returns a vector containing at most 6 values of the \code{inputData} in which the histogram shows local maxima.
 }
 \author{ Adrian Andronache \email{adi.andronache@gmail.com} \cr
-Luca Agnelli \email{luca.agnelli@gmail.com}
+	Luca Agnelli \email{luca.agnelli@gmail.com}
 }
 
 \seealso{\code{\link{hist}}, \code{\link{FBNormalization}} }

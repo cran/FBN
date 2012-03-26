@@ -30,7 +30,7 @@ FBN.valueCenter(inputData = NULL, normalizingValue = NULL,
 	Returns a vector containing the normalized values of the \code{inputData}
 }
 \author{ Adrian Andronache \email{adi.andronache@gmail.com} \cr
-Luca Agnelli \email{luca.agnelli@gmail.com}
+	Luca Agnelli \email{luca.agnelli@gmail.com}
 }
 \seealso{ \code{\link{FBN.kmeans}}, \code{\link{FBNormalization}}  }
 \examples{

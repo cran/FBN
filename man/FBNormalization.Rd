@@ -49,7 +49,7 @@ FBNormalization(rawDataFileName = NULL, fishProbesFileName = NULL,
 	No value is returned. The function writes on the disk the output files as previously described. 
 }
 \author{ Adrian Andronache \email{adi.andronache@gmail.com} \cr
-Luca Agnelli \email{luca.agnelli@gmail.com}
+	Luca Agnelli \email{luca.agnelli@gmail.com}
 }
 \examples{
 

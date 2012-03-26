@@ -33,7 +33,7 @@ FBN.kmeans(inputData = NULL, minSpan = 0.2, breaksData = NULL)
   An object of class \code{\link{kmeans}}
 }
 \author{ Adrian Andronache \email{adi.andronache@gmail.com} \cr
-Luca Agnelli \email{luca.agnelli@gmail.com}
+	Luca Agnelli \email{luca.agnelli@gmail.com}
 }
 \examples{
 	
