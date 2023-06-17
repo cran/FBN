@@ -1,8 +1,8 @@
 \name{FBNormalization}
 \alias{FBNormalization}
 %- Also NEED an '\alias' for EACH other topic documented here.
-\title{ FISH Based Normalization and Copy Number inference of 
-	SNP microarray data }
+\title{ FISH Based Normalization and Copy Number Inference of 
+	SNP Microarray Data }
 \description{
   Normalizes the data from a file containing the raw values of the SNP probes of microarrray data
   by using the FISH probes and their corresponding CNs.
@@ -10,8 +10,12 @@
 \usage{
 FBNormalization(rawDataFileName, fishProbesFileName, 
 	normDataFileName, debugFlag, plotFlag, plotAndSaveFlag)
-FBNormalization(rawDataFileName = NULL, fishProbesFileName = NULL, 
-	normDataFileName = NULL, debugFlag = FALSE, plotFlag = FALSE, plotAndSaveFlag = FALSE)
+FBNormalization(rawDataFileName = NULL, 
+								fishProbesFileName = NULL, 
+								normDataFileName = NULL,	
+								debugFlag = FALSE, 
+								plotFlag = FALSE, 
+								plotAndSaveFlag = FALSE)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
@@ -36,7 +40,7 @@ FBNormalization(rawDataFileName = NULL, fishProbesFileName = NULL,
 		\item{}{ 'n' columns containing the values of the CN coresponding to the FISH probe, entitled with the custom identification name of the samples.}
 	}}
   \item{normDataFileName}{ The name of the output file where the normalized data will be written. Also, the function writes
-  	a file starting with the same name as \code{normDataFileName} and ending with \emph{'\_thresholds.txt'}, containing the
+  	a file starting with the same name as \code{normDataFileName} and ending with \emph{'_thresholds.txt'}, containing the
   	thresholds values that can be used to infer CNs to the normalized data. }
   \item{debugFlag}{ Logical value, specifying wether the function should run in debug mode. If \code{TRUE}, it plots the various histograms and the detected centers of the clusters in the different samples. }
   \item{plotFlag}{ Logical value, specifying wether the function should plot the histograms of the individual data. If \code{TRUE}, it plots the various histograms and the detected centers of the clusters in the different samples. }

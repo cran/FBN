@@ -68,35 +68,35 @@ FBNormalization <- function (rawDataFileName = NULL, fishProbesFileName = NULL, 
     flagError = FALSE
     if(is.null(chrData)){
     	flagError = TRUE
-    	cat("Please name \"chrom\" the field containing the chromosomes index in the rawData file!\n")
+    	cat("Please name chrom the field containing the chromosomes index in the rawData file!\n")
     }
     if(is.null(posData)){
     	flagError = TRUE
-    	cat("Please name \"physical.position\" the field containing the physical position of the SNP probes in the rawData file!\n")
+    	cat("Please name physical.position the field containing the physical position of the SNP probes in the rawData file!\n")
     }
     if(is.null(cytoData)){
     	flagError = TRUE
-    	cat("Please name \"cytoband\" the field containing the cytoband location of the SNP probes in the rawData file!\n")
+    	cat("Please name cytoband the field containing the cytoband location of the SNP probes in the rawData file!\n")
     }
     if(is.null(chrFish)){
     	flagError = TRUE
-    	cat("Please name \"chromosome\" the field containing the chromosomes index in the FISH probes file!\n")
+    	cat("Please name chromosome the field containing the chromosomes index in the FISH probes file!\n")
     }
     if(is.null(cytoFish)){
     	flagError = TRUE
-    	cat("Please name \"cytoband\" the field containing the cytoband location of the FISH probes in the FISH probes file!\n")
+    	cat("Please name cytoband the field containing the cytoband location of the FISH probes in the FISH probes file!\n")
     }
     if(is.null(cloneFish)){
     	flagError = TRUE
-    	cat("Please name \"BACclone\" the field containing the clone name of the FISH probes in the FISH probes file!\n")
+    	cat("Please name BACclone the field containing the clone name of the FISH probes in the FISH probes file!\n")
     }
     if(is.null(startFish)){
     	flagError = TRUE
-    	cat("Please name \"start.loc\" the field containing the start location of the FISH probes in the FISH probes file!\n")
+    	cat("Please name start.loc the field containing the start location of the FISH probes in the FISH probes file!\n")
     }
     if(is.null(endFish)){
     	flagError = TRUE
-    	cat("Please name \"end.loc\" the field containing the start location of the FISH probes in the FISH probes file!\n")
+    	cat("Please name end.loc the field containing the start location of the FISH probes in the FISH probes file!\n")
     }
 	if(flagError) return()
     ###############################################

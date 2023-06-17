@@ -3,10 +3,10 @@
 \alias{FBN}
 \docType{package}
 \title{
-	FISH Based Normalization and Copy Number inference of SNP microarray data
+	FISH Based Normalization and Copy Number Inference of SNP Microarray Data
 }
 \description{
-  Normalizes the data from a file containing the raw values of the SNP probes of microarrray data
+  Normalizes the data from a file containing the raw values of the SNP probes of microarray data
   by using the FISH probes and their corresponding CNs.
 }
 \details{

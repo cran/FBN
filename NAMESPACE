@@ -1,5 +1,7 @@
-# Default NAMESPACE created by R
-# Remove the previous line if you edit this file
+importFrom("grDevices", "bmp", "dev.print")
+importFrom("graphics", "hist", "par")
+importFrom("stats", "kmeans", "median", "sd")
+importFrom("utils", "read.table", "write.table")
 
 # Export all names
 exportPattern(".")

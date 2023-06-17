@@ -1,18 +1,16 @@
 Package: FBN
 Type: Package
-Title: FISH Based Normalization and Copy Number inference of SNP
-        microarray data
-Version: 1.5.1
-Date: 2012-03-26
-Author: Adrian Andronache <adi.andronache@gmail.com>, Luca Agnelli
-        <luca.agnelli@gmail.com>
-Maintainer: Luca Agnelli <luca.agnelli@gmail.com>
-Description: Normalizes the data from a file containing the raw values
-        of the SNP probes of microarrray data by using the FISH probes
-        and their corresponding CNs.
+Title: FISH Based Normalization and Copy Number Inference of SNP
+        Microarray Data
+Version: 1.5.2
+Date: 2023-06-16
+Author: Adrian Andronache <adi.andronache@gmail.com>, Luca Agnelli <luca.agnelli@gmail.com>
+Maintainer: Luca Agnelli  <luca.agnelli@gmail.com>
+Description: Normalizes the data from a file containing the raw values of the SNP probes of microarray data by using the FISH probes and their corresponding copy number.
 License: GPL (>= 2)
 LazyLoad: yes
-Packaged: 2012-03-26 09:06:49 UTC; emagene
+Packaged: 2023-06-16 16:37:05 UTC; agnelli
 Depends: R (>= 2.10)
+NeedsCompilation: no
 Repository: CRAN
-Date/Publication: 2012-03-26 09:27:00
+Date/Publication: 2023-06-17 23:50:04 UTC
